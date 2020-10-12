@@ -1,12 +1,15 @@
 package main
 
-import "fmt"
-
 func main() {
-	deck := newDeck()
-	for _, d := range deck {
-		fmt.Println(d)
+	// deck := newDeck()
+	// for _, d := range deck {
+	// 	fmt.Println(d)
 
-	}
-	fmt.Println(len(deck))
+	// }
+	// fmt.Println(len(deck))
+
+	deck := newDeck()
+
+	deck.saveToFile("mydeck")
+
 }
