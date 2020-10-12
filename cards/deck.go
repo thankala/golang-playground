@@ -12,7 +12,7 @@ func (d deck) print() {
 
 func newDeck() deck {
 	cards := deck{}
-	card := "Nothing"
+	card := ""
 	figures := []string{"Ace", "King", "Queen", "Jack", "Ten", "Nine", "Eight", "Seven", "Six", "Five", "Four", "Three", "Two"}
 	shapes := []string{"Spades", "Hearts", "Diamonds", "Clubs"}
 	for _, f := range figures {
