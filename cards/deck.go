@@ -12,13 +12,11 @@ func (d deck) print() {
 
 func newDeck() deck {
 	cards := deck{}
-	card := ""
 	figures := []string{"Ace", "King", "Queen", "Jack", "Ten", "Nine", "Eight", "Seven", "Six", "Five", "Four", "Three", "Two"}
 	shapes := []string{"Spades", "Hearts", "Diamonds", "Clubs"}
-	for _, f := range figures {
-		for _, s := range shapes {
-			card = f + " of " + s
-			cards = append(cards, card)
+	for _, figure := range figures {
+		for _, shape := range shapes {
+			cards = append(cards, figure+" of "+shape)
 		}
 	}
 	return cards
