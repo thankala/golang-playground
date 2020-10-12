@@ -38,6 +38,18 @@ func (d deck) saveToFile(deckName string) {
 	}
 }
 
+func readFromFile(deckName string) deck {
+	content, error := ioutil.ReadFile(deckName + ".txt")
+	if error != nil {
+		log.Fatal(error)
+	}
+	return fromString(content)
+}
+
 func (d deck) toString() string {
 	return strings.Join([]string(d), "\n")
+}
+
+func fromString(content []byte) deck {
+	return strings.Split(string(content), "\n")
 }

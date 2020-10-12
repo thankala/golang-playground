@@ -1,15 +1,13 @@
 package main
 
 func main() {
-	// deck := newDeck()
-	// for _, d := range deck {
-	// 	fmt.Println(d)
-
-	// }
+	deck := readFromFile("mydeck")
 	// fmt.Println(len(deck))
 
-	deck := newDeck()
+	// deck := newDeck()
 
-	deck.saveToFile("mydeck")
+	// deck.saveToFile("mydeck")
+
+	deck.print()
 
 }
