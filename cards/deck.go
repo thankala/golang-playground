@@ -34,14 +34,14 @@ func (d deck) deal(handSize int) (deck, deck) {
 }
 
 func (d deck) saveToFile(deckName string) {
-	error := ioutil.WriteFile(deckName+".txt", []byte(d.toString()), 0644)
+	error := ioutil.WriteFile(deckName, []byte(d.toString()), 0644)
 	if error != nil {
 		log.Fatal(error)
 	}
 }
 
 func readFromFile(deckName string) deck {
-	content, error := ioutil.ReadFile(deckName + ".txt")
+	content, error := ioutil.ReadFile(deckName)
 	if error != nil {
 		log.Fatal(error)
 	}
