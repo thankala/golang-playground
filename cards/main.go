@@ -7,6 +7,7 @@ func main() {
 	// deck := newDeck()
 
 	// deck.saveToFile("mydeck")
+	deck.shuffle()
 
 	deck.print()
 

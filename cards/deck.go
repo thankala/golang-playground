@@ -4,7 +4,9 @@ import (
 	"fmt"
 	"io/ioutil"
 	"log"
+	"math/rand"
 	"strings"
+	"time"
 )
 
 type deck []string
@@ -44,6 +46,14 @@ func readFromFile(deckName string) deck {
 		log.Fatal(error)
 	}
 	return fromString(content)
+}
+
+func (d deck) shuffle() {
+	r := rand.New(rand.NewSource(time.Now().UnixNano()))
+	for i := range d {
+		newPosition := r.Intn(len(d) - 1)
+		d[i], d[newPosition] = d[newPosition], d[i]
+	}
 }
 
 func (d deck) toString() string {
